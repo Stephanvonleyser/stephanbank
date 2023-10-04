@@ -15,7 +15,7 @@ function App() {
           <NavBar />
           <Container>
               <Routes>
-                  <Route path="/" element={<Home />} />
+                  <Route path="/" element={<Home />} index /> {/* Set the 'index' attribute */}
                   <Route path="/createaccount" element={<CreateAccount />} />
                   <Route path="/deposit" element={<Deposit />} />
                   <Route path="/withdraw" element={<Withdraw />} />
