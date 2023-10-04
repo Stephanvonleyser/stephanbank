@@ -1,0 +1,11 @@
+.jumbotron {
+    padding: 4rem 2rem;
+    margin-bottom: 4rem;
+    background-color: var(--bs-light);
+    border-radius: .3rem;
+}
+
+.image {
+    max-height: 30vh;
+    overflow: hidden;
+}
