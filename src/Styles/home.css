@@ -1,0 +1,65 @@
+/* Adjust the jumbotron styles */
+.jumbotron {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff; /* White text color */
+    position: relative; /* Add position relative for overlay */
+}
+
+/* Add a background overlay to the entire jumbotron */
+.jumbotron::before {
+    content: "";
+    background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent black background color */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1; /* Place it behind the text */
+}
+
+/* Darker text shadow for better readability on the image */
+.text-body-emphasis {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+/* Responsive font size and white text color */
+@media (min-width: 992px) {
+    .display-4 {
+        font-size: 4rem;
+        color: #fff;
+    }
+}
+
+/* Responsive font size for the slogan */
+@media (min-width: 992px) {
+    .display-6 {
+        font-size: 2rem;
+    }
+}
+
+/* Ensure full coverage of the background image and no repetition */
+.jumbotron {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Add shadow and border-radius to the inner container */
+.col-lg-6 {
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
+/* Add a white text shadow outline to the bank name and slogan */
+.display-4,
+.display-6 {
+    color: #000; /* Set the text color to black */
+    text-shadow:
+        -1px -1px 0 #fff,  
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff;
+}
