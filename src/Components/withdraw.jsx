@@ -27,8 +27,16 @@ function Withdraw() {
         <Card bg="primary" text="white" style={{ width: '18rem' }} className="mb-2">
             <Card.Header>Withdraw</Card.Header>
             <Card.Body>
+            {ctx.currentUser ? (
+                    <>
+                        <p>Hello, {ctx.currentUser.name}</p>
+                        <p>Balance: ${ctx.currentUser.balance}</p>
+                    </>
+                ) : (
+                    <p>Please login</p>
+                )}
                 {status && (
-                    <Alert variant={status.startsWith('Error') ? "danger" : "success"} onClose={() => setStatus('')} dismissible>
+                    <Alert variant="success" onClose={() => setStatus('')} dismissible>
                         <p>{status}</p>
                     </Alert>
                 )}

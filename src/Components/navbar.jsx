@@ -18,12 +18,12 @@ function NavBar() {
                     <Navbar.Toggle aria-controls="basic-navbar-nav" />
                     <Navbar.Collapse id="basic-navbar-nav">
                         <Nav className="me-auto" activeKey={location.pathname}>
-                            <Nav.Link as={NavLink} to="/" exact>Home</Nav.Link>
-                            <Nav.Link as={NavLink} to="/createaccount">Create Account</Nav.Link>
-                            <Nav.Link as={NavLink} to="/login">Login</Nav.Link>
-                            <Nav.Link as={NavLink} to="/deposit">Deposit</Nav.Link>
-                            <Nav.Link as={NavLink} to="/withdraw">Withdraw</Nav.Link>
-                            <Nav.Link as={NavLink} to="/alldata">All Data</Nav.Link>
+                            <Nav.Link as={NavLink} to="/" exact data-tooltip="Home Page">Home</Nav.Link>
+                            <Nav.Link as={NavLink} to="/createaccount" data-tooltip="Create Account Page">Create Account</Nav.Link>
+                            <Nav.Link as={NavLink} to="/login" data-tooltip="Login Page">Login</Nav.Link>
+                            <Nav.Link as={NavLink} to="/deposit" data-tooltip="Deposit Page">Deposit</Nav.Link>
+                            <Nav.Link as={NavLink} to="/withdraw" data-tooltip="Withdraw Page">Withdraw</Nav.Link>
+                            <Nav.Link as={NavLink} to="/alldata" data-tooltip="All Data Page">All Data</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

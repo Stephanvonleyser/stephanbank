@@ -24,6 +24,12 @@ function CreateAccount() {
                 return false;
             }
         }
+        if (label === 'password' && field.length <= 7) {
+            setStatus('Error: Password must be at least 8 characters long');
+            setTimeout(() => setStatus(''), 3000);
+            return false;
+            
+        }
         return true;
     }
 
